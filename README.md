@@ -25,5 +25,53 @@ macrecovery.py
 This will require Python installed
 
 # Downloading macOS
-To grab legacy installers is super easy, first grab a copy of OpenCorePkg (opens new window)and head to /Utilities/macrecovery/. Next copy the folder path for the macrecovery folder:
+To grab legacy installers is super easy, first grab a copy of OpenCorePkg and head to /Utilities/macrecovery/. Next copy the folder path for the macrecovery folder:
 ![alt text](https://dortania.github.io/OpenCore-Install-Guide/assets/img/file-path.0aea4278.png)
+
+From here, you'll want to open up a Command Prompt and cd into the macrecovery folder that we copied earlier:
+
+cd Paste_Folder_Path
+![alt text](https://cdn.glitch.me/6fd3928f-90f0-4238-b2b3-592896d694fd%2FZrzut%20ekranu%202021-11-12%20223518.png?v=1636752942996)
+
+
+Now run one of the following depending on what version of macOS you want(Note these scripts rely on Python support, please install if you haven't already):
+
+# Lion (10.7):
+python macrecovery.py -b Mac-2E6FAB96566FE58C -m 00000000000F25Y00 download
+python macrecovery.py -b Mac-C3EC7CD22292981F -m 00000000000F0HM00 download
+
+# Mountain Lion (10.8):
+python macrecovery.py -b Mac-7DF2A3B5E5D671ED -m 00000000000F65100 download
+
+# Mavericks (10.9):
+python macrecovery.py -b Mac-F60DEB81FF30ACF6 -m 00000000000FNN100 download
+
+# Yosemite (10.10):
+python macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000GDVW00 download
+
+# El Capitan (10.11):
+python macrecovery.py -b Mac-FFE5EF870D7BA81A -m 00000000000GQRX00 download
+
+# Sierra (10.12):
+python macrecovery.py -b Mac-77F17D7DA9285301 -m 00000000000J0DX00 download
+
+# High Sierra (10.13)
+python macrecovery.py -b Mac-7BA5B2D9E42DDD94 -m 00000000000J80300 download
+python macrecovery.py -b Mac-BE088AF8C5EB4FA2 -m 00000000000J80300 download
+
+# Mojave (10.14)
+python macrecovery.py -b Mac-7BA5B2DFE22DDD8C -m 00000000000KXPG00 download
+
+# Catalina (10.15)
+python macrecovery.py -b Mac-00BE6ED71E35EB86 -m 00000000000000000 download
+
+# Big Sur (11)
+python macrecovery.py -b Mac-42FD25EABCABB274 -m 00000000000000000 download
+
+# CAUTION: With macOS 11.3 and newer, XhciPortLimit is broken resulting in boot loops (opens new window). We advise users either install an older OS(ie. macOS 10.15, Catalina) or find a 11.2.3 or older Big Sur installer
+For education purposes, we have a copy provided here: macOS 11.2.1 20D75 Recovery Image
+If you've already mapped your USB ports (opens new window)and disabled XhciPortLimit, you can boot macOS 11.3+ without issue
+
+
+**This will take some time, however once you're finished you should get either BaseSystem or RecoveryImage files:
+![alt text](https://cdn.glitch.me/6fd3928f-90f0-4238-b2b3-592896d694fd%2Fokay.png?v=1636753692841)

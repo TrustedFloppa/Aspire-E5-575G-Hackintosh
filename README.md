@@ -26,4 +26,4 @@ This will require Python installed
 
 # Downloading macOS
 To grab legacy installers is super easy, first grab a copy of OpenCorePkg (opens new window)and head to /Utilities/macrecovery/. Next copy the folder path for the macrecovery folder:
-https://dortania.github.io/OpenCore-Install-Guide/assets/img/file-path.0aea4278.png
+![alt text](https://dortania.github.io/OpenCore-Install-Guide/assets/img/file-path.0aea4278.png)

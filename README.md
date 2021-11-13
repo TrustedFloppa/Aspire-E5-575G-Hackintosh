@@ -91,3 +91,12 @@ Otherwise, right click the partition on the USB and click Format and set it to F
 
 Next, go to the root of this USB drive and create a folder called *com.apple.recovery.boot.* Then move the downloaded BaseSystem or RecoveryImage files. Please ensure you copy over both the .dmg and .chunklist files to this folder:
 ![alt text](https://dortania.github.io/OpenCore-Install-Guide/assets/img/com-recovery.805dc41f.png)
+
+Now grab OpenCorePkg you downloaded earlier and open it:
+![alt text](https://dortania.github.io/OpenCore-Install-Guide/assets/img/base-oc-folder.9a1a058a.png)
+
+Here we see both IA32(32 Bit CPUs) and X64(64 Bit CPUs) folders, choose the one that's most appropriate to your hardware and open it. Next grab the EFI folder inside and place this on the root of the USB drive along side com.apple.recovery.boot. Once done it should look like this:
+
+![alt text](https://dortania.github.io/OpenCore-Install-Guide/assets/img/com-efi-done.a6fb730e.png)
+
+Now with all this done, head to [Setting up the EFI]() to finish up your work

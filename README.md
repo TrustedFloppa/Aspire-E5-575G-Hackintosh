@@ -75,3 +75,19 @@ If you've already mapped your USB ports (opens new window)and disabled XhciPortL
 
 **This will take some time, however once you're finished you should get either BaseSystem or RecoveryImage files:
 ![alt text](https://cdn.glitch.me/6fd3928f-90f0-4238-b2b3-592896d694fd%2Fokay.png?v=1636753692841)
+
+# Making the installer
+
+Simply open up Disk Management, and format your USB as FAT32:
+
+**Right click the Start Button on your task bar and select Disk Management.
+You should see all of your partitions and disks. On the bottom half, you'll see your devices. Find your USB.
+You'll want to format the USB to have a FAT32 partition.
+If you have multiple partitions on the USB, right click each partition and click Delete Volume for your USB (This will remove data, make sure you have backups and only remove partitions from your USB)
+Right click the unallocated space and create a new simple volume. Make sure it is FAT32 and at least a gigabyte or two big. Name it "EFI".
+Otherwise, right click the partition on the USB and click Format and set it to FAT32.
+
+![alt text](https://dortania.github.io/OpenCore-Install-Guide/assets/img/DiskManagement.aac12f25.jpg)
+
+Next, go to the root of this USB drive and create a folder called *com.apple.recovery.boot.* Then move the downloaded BaseSystem or RecoveryImage files. Please ensure you copy over both the .dmg and .chunklist files to this folder:
+![alt text](https://dortania.github.io/OpenCore-Install-Guide/assets/img/com-recovery.805dc41f.png)

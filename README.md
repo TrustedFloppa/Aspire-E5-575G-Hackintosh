@@ -99,4 +99,4 @@ Here we see both IA32(32 Bit CPUs) and X64(64 Bit CPUs) folders, choose the one 
 
 ![alt text](https://dortania.github.io/OpenCore-Install-Guide/assets/img/com-efi-done.a6fb730e.png)
 
-Now with all this done, head to [Setting up the EFI]() to finish up your work
+Now with all this done, head to [Setting up the EFI](https://github.com/TrustedFloppa/Aspire-E5-575G-Hackintosh/blob/main/SettingUpTheEFI.md) to finish up your work

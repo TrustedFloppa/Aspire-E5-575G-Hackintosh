@@ -22,3 +22,5 @@ Reminder:
 SSDTs and custom DSDTs(.aml) go in ACPI folder
 Kexts(.kext) go in Kexts folder
 Firmware drivers(.efi) go in the Drivers folder
+
+# Now with all this done, head to [Gathering Files](https://www.google.com) to get the needed kexts and firmware drivers

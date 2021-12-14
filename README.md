@@ -3,7 +3,7 @@ Supported Versions of Mac OS X
 # Monterey (12.1) # Big Sur (10.16)  Catalina (10.15)  Mojave (10.14)  High Sierra (10.13)  Sierra (10.12)  El Capitan (10.11)
 
 # Note
-You will require lan cable to use online installer if you want to get offline installer then offline installer
+You will require lan cable to use online installer if you dont have lan cable then use Method 2 (Offline Installer)
 
 
 # Method 1 : Online Installer
@@ -58,7 +58,7 @@ python macrecovery.py -b Mac-42FD25EABCABB274 -m 00000000000000000 download
 
 # Copy files you got in macrecovery to your usb and create new folder named com.apple.recovery
 
-# Note: you cant use older installers like Yosemite, Mavericks , Mountain lion , and lion. Because of skylake processors generation
+# Note: you cant use older installers like Yosemite, Mavericks , Mountain lion , and lion. Because of skylake processors arent supporting older than El capitan
 
 
 

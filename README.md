@@ -1,18 +1,18 @@
 # Aspire-E5-575G-Hackintosh
 Supported Versions of Mac OS X
-# Big Sur (10.16)  Catalina (10.15)  Mojave (10.14)  High Sierra (10.13)  Sierra (10.12)  El Capitan (10.11)  Yosemite (10.10)  Mavericks (10.9)  Mountain Lion (10.8)  Lion (10.7)  Snow Leopard (10.6)
+# Monterey (12.1) # Big Sur (10.16)  Catalina (10.15)  Mojave (10.14)  High Sierra (10.13)  Sierra (10.12)  El Capitan (10.11)
+
+# Note
+You will require lan cable to use online installer if you want to get offline installer then offline installer
 
 
+# Method 1 : Online Installer
 
-# Method 1 : OpenCore
+Make sure you downloaded efi from this repo and placed it into your usb
+
 Download OpenCore From Here
-https://github.com/acidanthera/OpenCorePkg/releases/download/0.7.5/OpenCore-0.7.5-RELEASE.zip
+https://github.com/acidanthera/OpenCorePkg/releases/download/0.7.6/OpenCore-0.7.6-RELEASE.zip
 
-# Prerequisites
-**[CRUCIAL]** Time and patience.
-Don't start working on this if you have deadlines or important work. Hackintoshes are not something you should be relying on as a work machine.
-# Making the installer in Windows
-While you don't need a fresh install of macOS to use OpenCore, some users prefer having a fresh slate with their boot manager upgrades.
 
 To start you'll need the following:
 
@@ -36,18 +36,6 @@ cd Paste_Folder_Path
 
 Now run one of the following depending on what version of macOS you want(Note these scripts rely on Python support, please install if you haven't already):
 
-# Lion (10.7):
-python macrecovery.py -b Mac-2E6FAB96566FE58C -m 00000000000F25Y00 download
-python macrecovery.py -b Mac-C3EC7CD22292981F -m 00000000000F0HM00 download
-
-# Mountain Lion (10.8):
-python macrecovery.py -b Mac-7DF2A3B5E5D671ED -m 00000000000F65100 download
-
-# Mavericks (10.9):
-python macrecovery.py -b Mac-F60DEB81FF30ACF6 -m 00000000000FNN100 download
-
-# Yosemite (10.10):
-python macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000GDVW00 download
 
 # El Capitan (10.11):
 python macrecovery.py -b Mac-FFE5EF870D7BA81A -m 00000000000GQRX00 download
@@ -68,35 +56,44 @@ python macrecovery.py -b Mac-00BE6ED71E35EB86 -m 00000000000000000 download
 # Big Sur (11)
 python macrecovery.py -b Mac-42FD25EABCABB274 -m 00000000000000000 download
 
-# CAUTION: With macOS 11.3 and newer, XhciPortLimit is broken resulting in boot loops (opens new window). We advise users either install an older OS(ie. macOS 10.15, Catalina) or find a 11.2.3 or older Big Sur installer
-For education purposes, we have a copy provided here: macOS 11.2.1 20D75 Recovery Image
-If you've already mapped your USB ports (opens new window)and disabled XhciPortLimit, you can boot macOS 11.3+ without issue
+# Copy files you got in macrecovery to your usb and create new folder named com.apple.recovery
+
+# Note: you cant use older installers like Yosemite, Mavericks , Mountain lion , and lion. Because of skylake processors generation
 
 
-**This will take some time, however once you're finished you should get either BaseSystem or RecoveryImage files:
-![alt text](https://cdn.glitch.me/6fd3928f-90f0-4238-b2b3-592896d694fd%2Fokay.png?v=1636753692841)
 
-# Making the installer
 
-Simply open up Disk Management, and format your USB as FAT32:
 
-**Right click the Start Button on your task bar and select Disk Management.
-You should see all of your partitions and disks. On the bottom half, you'll see your devices. Find your USB.
-You'll want to format the USB to have a FAT32 partition.
-If you have multiple partitions on the USB, right click each partition and click Delete Volume for your USB (This will remove data, make sure you have backups and only remove partitions from your USB)
-Right click the unallocated space and create a new simple volume. Make sure it is FAT32 and at least a gigabyte or two big. Name it "EFI".
-Otherwise, right click the partition on the USB and click Format and set it to FAT32.
+# Offline Installer
+### Thanks olarila for offline installer 😄
+-Download Etcher-
 
-![alt text](https://dortania.github.io/OpenCore-Install-Guide/assets/img/DiskManagement.aac12f25.jpg)
+https://github.com/balena-io/etcher/releases/download/v1.7.1/balenaEtcher-Setup-1.7.1.exe?d_id=b2a0dd08-4220-4144-92be-60a3bc5f3b1eR
 
-Next, go to the root of this USB drive and create a folder called *com.apple.recovery.boot.* Then move the downloaded BaseSystem or RecoveryImage files. Please ensure you copy over both the .dmg and .chunklist files to this folder:
-![alt text](https://dortania.github.io/OpenCore-Install-Guide/assets/img/com-recovery.805dc41f.png)
+--MONTEREY--
 
-Now grab OpenCorePkg you downloaded earlier and open it:
-![alt text](https://dortania.github.io/OpenCore-Install-Guide/assets/img/base-oc-folder.9a1a058a.png)
+MediaFire Link - https://tinyurl.com/2p8fxsyk
 
-Here we see both IA32(32 Bit CPUs) and X64(64 Bit CPUs) folders, choose the one that's most appropriate to your hardware and open it. Next grab the EFI folder inside and place this on the root of the USB drive along side com.apple.recovery.boot. Once done it should look like this:
+--BIG SUR--
 
-![alt text](https://dortania.github.io/OpenCore-Install-Guide/assets/img/com-efi-done.a6fb730e.png)
+MediaFire Link - https://tinyurl.com/2ztn9nab
 
-Now with all this done, head to [Setting up the EFI](https://github.com/TrustedFloppa/Aspire-E5-575G-Hackintosh/blob/main/SettingUpTheEFI.md) to finish up your work
+--CATALINA--
+
+MediaFire Link - https://tinyurl.com/y3mlf4of   
+
+--MOJAVE--
+
+MediaFire Link - https://tinyurl.com/y4ls8a4t
+
+--HIGH SIERRA--
+
+MediaFire Link - https://tinyurl.com/ycq8d3ld
+
+--SIERRA--
+
+MediaFire Link - https://tinyurl.com/y6gqb2ya
+
+--EL CAPITAN--
+
+MediaFire Link - https://tinyurl.com/y37jwjpv
